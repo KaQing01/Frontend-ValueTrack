@@ -1,0 +1,29 @@
+@import "bootstrap/scss/bootstrap";
+
+h1,#selectedMonth{
+    color:white;
+}
+
+p{
+    color:black;
+    font-weight: bold;
+    margin:0;
+}
+
+#expenses{
+    color:red;
+}
+
+#incomes{
+    color:green;
+}
+
+button{
+    margin: 5px;
+}
+
+select{
+    border-radius: 5px;
+}
+
+
