@@ -12,7 +12,7 @@ function Value(props) {
   // Edit a value info
   function editValue(id, valueType, category, company,amount,description,date) {
     axios
-    .patch(`http://localhost:5081/values/${id}`, { valueType: valueType, category: category, company: company, amount: amount, description: description, date: date})
+    .patch(`https://backend-valuetrack.onrender.com/values/${id}`, { valueType: valueType, category: category, company: company, amount: amount, description: description, date: date})
     .then((response) => {
     const updatedValue = response.data;
     const editedValueList = props.values.map((value) =>
@@ -26,7 +26,7 @@ function Value(props) {
   // Delete a value
   function deleteValue(id) {
     axios
-    .delete(`http://localhost:5081/values/${id}`)
+    .delete(`https://backend-valuetrack.onrender.com/values/${id}`)
     .then(() => setValues(props.values.filter((value) => value._id !== id)))
     .catch((error) => console.error(error));
   }

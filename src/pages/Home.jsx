@@ -10,7 +10,7 @@ function Home() {
   // Make a POST request to the backend to add a new value
   function addValue(valueType, category, company,amount,description,date) {
     axios
-    .post('http://localhost:5081/values', { valueType, category,company,amount,description,date})
+    .post('https://backend-valuetrack.onrender.com/values', { valueType, category,company,amount,description,date})
     .then((response) => setValues([...values, response.data]))
     .catch((error) => console.error(error));
   }
@@ -18,7 +18,7 @@ function Home() {
   // Make a POST request to the backend to add a new company
   function addCompany(name, type, location) {
     axios
-    .post('http://localhost:5081/companies', { name, type, location})
+    .post('https://backend-valuetrack.onrender.com/companies', { name, type, location})
     .then((response) => setCompanies([...companies, response.data]))
     .catch((error) => console.error(error));
   }

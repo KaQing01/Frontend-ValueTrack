@@ -16,7 +16,7 @@ const App = () => {
   // Fetch values from the backend
   useEffect(() => {
     axios
-    .get('http://localhost:5081/values')
+    .get('https://backend-valuetrack.onrender.com/values')
     .then((response) => setValues(response.data))
     .catch((error) => console.error(error));
   }, [values]);
@@ -24,7 +24,7 @@ const App = () => {
   // Fetch companies from the backend
   useEffect(() => {
     axios
-    .get('http://localhost:5081/companies')
+    .get('https://backend-valuetrack.onrender.com/companies')
     .then((response) => setCompanies(response.data))
     .catch((error) => console.error(error));
   }, [companies]);
